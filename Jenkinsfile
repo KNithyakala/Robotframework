@@ -8,14 +8,15 @@ pipeline {
         }
         stage('Install Requirements') {
             steps {
-                bat '"C:\\Users\\CK NITHYAKALA\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" -m pip install -r requirements.txt'
+                bat '"C:\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                bat '"C:\\Users\\CK NITHYAKALA\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" -m robot TestCodes'
+                bat '"C:\\Python313\\python.exe" -m robot TestCodes'
             }
         }
     }
 }
+
 
